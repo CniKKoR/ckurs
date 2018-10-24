@@ -1,0 +1,1 @@
+Musterlösungen für die Aufgaben aus ../Aufgabenstellung/ 

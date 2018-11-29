@@ -32,20 +32,20 @@ int main (void) {
     v_set[2] = &v_3_3;
     v_set[3] = &v_3_1;
 
-    edge e_1_1_1_3 = { .from = &v_1_1, .to = &v_1_3 };
-    edge e_1_3_1_1 = { .from = &v_1_3, .to = &v_1_1 };
+    edge e_1_1_1_3 = { .from = &v_1_1, .to = &v_1_3, 1 };
+    edge e_1_3_1_1 = { .from = &v_1_3, .to = &v_1_1, 1 };
     
-    edge e_1_1_3_3 = { .from = &v_1_1, .to = &v_3_3 };
-    edge e_3_3_1_1 = { .from = &v_3_3, .to = &v_1_1 };
+    edge e_1_1_3_3 = { .from = &v_1_1, .to = &v_3_3, 1 };
+    edge e_3_3_1_1 = { .from = &v_3_3, .to = &v_1_1, 1 };
     
-    edge e_1_1_3_1 = { .from = &v_1_1, .to = &v_3_1 };
-    edge e_3_1_1_1 = { .from = &v_3_1, .to = &v_1_1 };
+    edge e_1_1_3_1 = { .from = &v_1_1, .to = &v_3_1, 1 };
+    edge e_3_1_1_1 = { .from = &v_3_1, .to = &v_1_1, 1 };
     
-    edge e_1_3_3_3 = { .from = &v_1_3, .to = &v_3_3 };
-    edge e_3_3_1_3 = { .from = &v_3_3, .to = &v_1_3 };
+    edge e_1_3_3_3 = { .from = &v_1_3, .to = &v_3_3, 1 };
+    edge e_3_3_1_3 = { .from = &v_3_3, .to = &v_1_3, 1 };
     
-    edge e_3_1_3_3 = { .from = &v_3_1, .to = &v_3_3 };
-    edge e_3_3_3_1 = { .from = &v_3_3, .to = &v_3_1 };
+    edge e_3_1_3_3 = { .from = &v_3_1, .to = &v_3_3, 1 };
+    edge e_3_3_3_1 = { .from = &v_3_3, .to = &v_3_1, 1 };
 
     edge **e_set = malloc(sizeof(void*) * 10);
 

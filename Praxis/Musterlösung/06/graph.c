@@ -69,7 +69,7 @@ int main (void) {
     printf("\n");
 
     for (size_t i = 0; i < g.e_count; ++i) {
-        printf("Edge %zu: (%li,%li) -> (%li,%li)\n", i, (*(g.e[i])).from->x, (*(g.e[i])).from->y, (*((*(g.e[i])).to)).x, (*((*(g.e[i])).to)).y);
+        printf("Edge %zu: (%li,%li) -> (%li,%li)\n", i, (*((*(g.e[i])).from)).x, (*((*(g.e[i])).from)).y, (*((*(g.e[i])).to)).x, (*((*(g.e[i])).to)).y);
     }
 
     // always free memory previously allocated

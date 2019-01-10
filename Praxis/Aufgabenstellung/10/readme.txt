@@ -1,4 +1,4 @@
-Das folgende Programm wird mit folgendem Ausdruck kompiliert: gcc -lm main.c
+Das folgende Programm wird mit folgendem Ausdruck kompiliert: gcc main.c -lm
 
 Zum Ausführen des Programms muss ein Subordner "img" am selben Ort angelegt
 werden. Dort werden die generierten PNG-Dateien gespeichert.

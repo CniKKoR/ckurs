@@ -63,7 +63,6 @@ void mandelbrot_et(uint8_t data[], size_t width, size_t height, double re_min,
   size_t *histogram = calloc(MAX_ITERS, sizeof(size_t));
 
   // populate histogram during first pass
-  #pragma omp parallel for simd schedule(runtime) collapse(2)
   for (size_t py = 0; py < height; ++py) {
     for (size_t px = 0; px < width; ++px) {
       double x0 = pixel_to_scale(px, IMAGE_X, re_min, re_max);
@@ -84,13 +83,11 @@ void mandelbrot_et(uint8_t data[], size_t width, size_t height, double re_min,
   }
 
   size_t total_iterations = 0;
-  #pragma omp parallel for simd reduction(+:total_iterations)
   for (size_t i = 0; i < MAX_ITERS; ++i) {
     total_iterations += histogram[i];
   }
 
   // second pass renders the image using the histogram
-  #pragma omp parallel for simd schedule(runtime) collapse(2)
   for (size_t py = 0; py < height; ++py) {
     for (size_t px = 0; px < width; ++px) {
       double x0 = pixel_to_scale(px, IMAGE_X, re_min, re_max);

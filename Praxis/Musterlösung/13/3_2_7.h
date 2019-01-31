@@ -1,10 +1,10 @@
-typedef struct nodetype *BRtr;
+typedef struct nodetype *BPtr;
 typedef struct nodetype {
   int key;
   BRtr left, right;
 } node;
 
-void sum_keys(node *t) {
+void sum_keys(BPtr t) {
   if(t->right) {
     t->key += t->right.key;
     sum_keys(t->right);
@@ -14,7 +14,7 @@ void sum_keys(node *t) {
     sum_keys(t->left);
   }
   if(t->key % 2 == 0) {
-    BRtr *temp = t->right;
+    BPtr temp = t->right;
     t->left = t->right;
     t->right = temp;
   }

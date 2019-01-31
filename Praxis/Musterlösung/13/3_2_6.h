@@ -8,8 +8,10 @@ node Tree;
 int anz;
 
 int blatt(node t) {
-  if(t->left || t->right) {
-    return 0;
+  if (t) {
+    if(t->left || t->right) {
+      return 0;
+    }
   }
   return 1;
 }

@@ -13,6 +13,13 @@ int prim(int x) {
   return 1;
 }
 
-void prim_ex(l_Ptr *l) {
-
+void prim_ex(l_Ptr *l) {      // l points at the previous elements next-pointer
+  if(*l) {                    // element exists
+    if(prim((*l)->key)) {     // element is prim
+      *l = (*l)->next;        // change previous next pointer
+      prim_ex(l);             // execute prim_ex with new list (next-pointer changes)
+    } else {
+      prim_ex(&((*l)->next)); // execute prim_ex with adress of the next element
+    }
+  }
 }

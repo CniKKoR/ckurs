@@ -6,3 +6,7 @@ typedef struct ele {
 
 node Tree;
 int anz;
+
+int blatt(node t);
+
+int anzahl(node t);

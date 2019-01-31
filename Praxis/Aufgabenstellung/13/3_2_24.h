@@ -8,4 +8,4 @@ l_Ptr liste;
 
 int prim(x);
 
-void prim_ex(l_Ptr l);
+void prim_ex(l_Ptr *l);
